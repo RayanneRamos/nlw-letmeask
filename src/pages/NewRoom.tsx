@@ -3,10 +3,10 @@ import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import '../styles/auth.scss';
 import { Button } from '../components/Button';
-import { useAuth } from '../hooks/useAuth';
+//import { useAuth } from '../hooks/useAuth';
 
 export function NewRoom() {
-  const { user } = useAuth();
+  //const { user } = useAuth();
 
   return (
     <div id="page-auth">
