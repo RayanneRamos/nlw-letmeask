@@ -8,7 +8,7 @@ import { useAuth } from '../hooks/useAuth';
 
 export function Home() {
   const history = useHistory();
-  const { user ,signInWithGoogle } = useAuth();
+  const { user, signInWithGoogle } = useAuth();
 
   async function handleCreateRoom() {
     if(!user) {
