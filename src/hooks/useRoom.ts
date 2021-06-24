@@ -24,7 +24,7 @@ type FirebaseQuestions = Record<string, {
   isAnswered: boolean;
   isHighLighted: boolean;
   likes: Record<string, {
-    auhorId: string;
+    authorId: string;
   }>
 }>
 
@@ -48,7 +48,7 @@ export function useRoom(roomId: string) {
           isHighLighted: value.isHighLighted,
           isAnswered: value.isAnswered,
           likeCount: Object.values(value.likes ?? {}).length,
-          likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.auhorId === user?.id)?.[0],
+          likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0],
         }
       })
 
