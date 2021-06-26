@@ -1,10 +1,10 @@
 import { useHistory, useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../components/Button/index';
+import { Question } from '../components/Question/index';
+import { RoomCode } from '../components/RoomCode/index';
 import '../styles/room.scss';
-import '../styles/question.scss';
+import '../components/Question/style.scss';
 import { useRoom } from '../hooks/useRoom';
 import deleteImg from '../assets/images/delete.svg';
 import { database } from '../services/firebase';

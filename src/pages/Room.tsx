@@ -1,13 +1,13 @@
 import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../components/Button/index';
+import { Question } from '../components/Question/index';
+import { RoomCode } from '../components/RoomCode/index';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 import '../styles/room.scss';
-import '../styles/question.scss';
+import '../components/Question/style.scss';
 import { useRoom } from '../hooks/useRoom';
 
 type RoomParams = {
