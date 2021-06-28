@@ -43,6 +43,10 @@ export function Home() {
     history.push(`/rooms/${roomCode}`);
   }
 
+  function handleGoToRoomList() {
+    return history.push(`roomlist`);
+  }
+
   return (
     <div id="page-auth">
       <aside>
@@ -59,15 +63,16 @@ export function Home() {
           </button>
           <div className="separator">ou entre em um sala</div>
           <form onSubmit={handleJoinRoom}>
-            <input 
-              type="text"
-              placeholder="Digite o código da sala"
-              onChange={event => setRoomCode(event.target.value)}
-              value={roomCode}
-            />
-            <Button type="submit">
-              Entrar na sala
-            </Button>
+            <div>
+              <input 
+                  type="text"
+                  placeholder="Digite o código da sala"
+                  onChange={event => setRoomCode(event.target.value)}
+                  value={roomCode}
+              />
+              <Button type="submit">Entrar na sala</Button>
+            </div>
+            <Button onClick={handleGoToRoomList}>Lista de salas</Button>  
           </form>
         </div>
       </main>

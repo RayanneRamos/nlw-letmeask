@@ -1,6 +1,5 @@
 import firebase from "firebase";
-import { ReactNode, useEffect, useState } from "react";
-import { createContext } from "react";
+import { ReactNode, useEffect, useState, createContext } from "react";
 import { auth } from "../services/firebase";
 
 type User = {

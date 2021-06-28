@@ -31,7 +31,8 @@ export function AdminRoom () {
 
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
-      endedAt: new Date()
+      endedAt: new Date(),
+      roomIsOpen: false
     });
 
     history.push('/');
@@ -49,11 +50,15 @@ export function AdminRoom () {
     })
   }
 
+  function handleGoHomePage() {
+    return history.push('/');
+  }
+
   return (
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img src={logoImg} alt="Letmeask" onClick={handleGoHomePage} />
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
