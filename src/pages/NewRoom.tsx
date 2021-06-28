@@ -9,7 +9,7 @@ import { useAuth } from '../hooks/useAuth';
 
 export function NewRoom() {
   const { user } = useAuth();
-  const [newRoom, setNewRoom] = useState('');
+  const [ newRoom, setNewRoom ] = useState('');
   const history = useHistory();
 
   async function handleCreateRoom(event: FormEvent) {
@@ -23,7 +23,8 @@ export function NewRoom() {
 
     const firebaseRoom = await roomRef.push({
       title: newRoom,
-      authorId: user?.id
+      authorId: user?.id,
+      roomIsOpen: true,
     });
 
     history.push(`/rooms/${firebaseRoom.key}`);

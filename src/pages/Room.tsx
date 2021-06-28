@@ -9,6 +9,7 @@ import { database } from '../services/firebase';
 import '../styles/room.scss';
 import '../components/Question/style.scss';
 import { useRoom } from '../hooks/useRoom';
+import { useHistory } from 'react-router';
 
 type RoomParams = {
   id: string;
@@ -17,9 +18,10 @@ type RoomParams = {
 export function Room () {
   const params = useParams<RoomParams>();
   const roomId = params.id;
-  const [newQuestion, setNewQuestion] = useState('');
-  const { user } = useAuth();
+  const [ newQuestion, setNewQuestion ] = useState('');
+  const { user, signInWithGoogle } = useAuth();
   const { title, questions } = useRoom(roomId);
+  const history = useHistory();
   
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -57,11 +59,15 @@ export function Room () {
     }
   }
 
+  function handleGoToHomePage() {
+    return history.push('/');
+  }
+
   return (
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img src={logoImg} alt="Letmeask" onClick={handleGoToHomePage} />
           <RoomCode code={roomId} />
         </div>
       </header>
