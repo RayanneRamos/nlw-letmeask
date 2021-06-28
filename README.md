@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Letmeask" src="../src/assets/images/logo.svg">
+  <img src="https://user-images.githubusercontent.com/43352880/123683236-5dda3000-d822-11eb-976d-440661e72719.png" alt="Letmeask">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <h1 align="center">
-  <img alt="Letmeask" title="Letmeask" src="../assets/images/cover.svg">
+  <img src="https://user-images.githubusercontent.com/43352880/123683373-819d7600-d822-11eb-9825-5f21cef4c924.png" title="Letmeask" alt="Letmeask">
 </h1>
 
 <br>
@@ -18,11 +18,11 @@
 
 This project was developed using the following technologies:
 
- - [React](https://reactjs.org)
+ - [ReactJS](https://reactjs.org)
  - [Firebase](https://firebase.google.com/)
  - [Typescript](https://www.typescriptlang.org/)
 
-## 🚀 Getting Started
+## 🚀 Getting started
 
 Clone the project and access the folder.
 
@@ -31,9 +31,9 @@ $ git clone https://github.com/RayanneRamos/letmeask
 $ cd letmeask
 ```
 
-Follow the steps below: 
+Follow the steps below:
 
-```bash 
+```bash
 # Install the dependencies
 $ yarn
 
@@ -43,13 +43,13 @@ $ yarn start
 
 The app will be available for access on your browser at http://localhost:3000
 
-## 🔖 Layout 
+## 🔖 Layout
 
 You can view the project layout through the links below:
 
- - [Layout Web](https://www.figma.com/file/Uf2FtAixC7CNH2stDTTy0c/Letmeask-(Copy))
+ - [Layout Web](https://www.figma.com/file/Uf2FtAixC7CNH2stDTTy0c/Letmeask-(Copy)?node-id=0%3A1) 
 
-Remembering that you need to have a [Figma](http://figma.com/) account to access it.
+Remembering that you need to have [Figma](http://figma.com/) account to access it.
 
 ## 📝 License
 
@@ -57,4 +57,4 @@ This project is licensed under the MIT License.
 
 ---
 
-<p align="center"> Made with by Rayanne Ramos </p>
+<p aling="center">Made with by Rayanne Ramos</p>
