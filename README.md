@@ -14,47 +14,64 @@
 
 <br>
 
+## 💻 pROJETO
+
+[Let Me Ask](https://letmeask-a22a1.web.app/) é um projeto desenvolvido durante a [Next Level Week #06](https://nextlevelweek.com/),
+apresentado pela [Rocketseat](https://rocketseat.com.br) entre 20 a 27 de Junho de 2021.
+
+ - [x] Aula 1
+ - [x] Aula 2
+ - [x] Aula 3
+ - [x] Aula 4
+ - [x] Aula 5
+
 ## 🧪 Technologies
 
-This project was developed using the following technologies:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
  - [ReactJS](https://reactjs.org)
  - [Firebase](https://firebase.google.com/)
  - [Typescript](https://www.typescriptlang.org/)
 
-## 🚀 Getting started
-
-Clone the project and access the folder.
+## 🚀 Instalação
 
 ```bash
-$ git clone https://github.com/RayanneRamos/letmeask
+# Clone o repositório e entre na pasta do projeto
+$ git clone https://github.com/RayanneRamos/letmeask.git
 $ cd letmeask
-```
 
-Follow the steps below:
+# Instale as dependências
+$ npm install
+# ou
+$ yarn install
 
-```bash
-# Install the dependencies
-$ yarn
-
-# Start the project
+# Execute a aplicação
+$ npm start
+# ou
 $ yarn start
 ```
 
-The app will be available for access on your browser at http://localhost:3000
+Abra http://localhost:3000 no seu navegador para ver a aplicação rodando!
 
 ## 🔖 Layout
 
-You can view the project layout through the links below:
+Você pode visualizar o layout do projeto através:
 
  - [Layout Web](https://www.figma.com/file/Uf2FtAixC7CNH2stDTTy0c/Letmeask-(Copy)?node-id=0%3A1) 
 
-Remembering that you need to have [Figma](http://figma.com/) account to access it.
+## 🔥 Desafios
+ - [] Login Github
+ - [] Login Email / Senha
+ - [] Login Facebook
+ - [] Login Twitter
+ - [x] Responsividade
+ - [] Dark Theme
+ - [] PWA
 
 ## 📝 License
 
-This project is licensed under the MIT License.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para obter mais detalhes.
 
 ---
 
-<p aling="center">Made with by Rayanne Ramos</p>
+<p aling="center">Criado by Rayanne Ramos</p>
