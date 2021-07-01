@@ -1,19 +1,24 @@
 import { useHistory, useParams } from 'react-router-dom';
+
 import logoImg from '../../assets/images/logo.svg';
+import deleteImg from '../../assets/images/delete.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
+import checkImg from '../../assets/images/check.svg';
+import answerImg from '../../assets/images/answer.svg';
+
 import { Button } from '../../components/Button/index';
 import { Question } from '../../components/Question/index';
 import { RoomCode } from '../../components/RoomCode/index';
-import '../AdminRoom/style.scss';
-import '../../components/Question/style.scss';
-import { useRoom } from '../../hooks/useRoom';
-import deleteImg from '../../assets/images/delete.svg';
-import { database } from '../../services/firebase';
-import checkImg from '../../assets/images/check.svg';
-import answerImg from '../../assets/images/answer.svg';
-//import { useAuth } from '../hooks/useAuth';
-import logoDarkImg from '../../assets/images/logo-dark.svg';
-import { useTheme } from '../../hooks/useTheme';
 import { Toggle } from '../../components/Toggle/index';
+
+import { useRoom } from '../../hooks/useRoom';
+import { useTheme } from '../../hooks/useTheme';
+//import { useAuth } from '../../hooks/useAuth';
+
+import { database } from '../../services/firebase';
+
+import '../../components/Question/style.scss';
+import '../AdminRoom/style.scss';
 
 type RoomParams = {
   id: string;
