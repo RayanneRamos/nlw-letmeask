@@ -1,18 +1,18 @@
 import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import logoImg from '../assets/images/logo.svg';
-import { Button } from '../components/Button/index';
-import { Question } from '../components/Question/index';
-import { RoomCode } from '../components/RoomCode/index';
-import { useAuth } from '../hooks/useAuth';
-import { database } from '../services/firebase';
-import '../styles/room.scss';
-import '../components/Question/style.scss';
-import { useRoom } from '../hooks/useRoom';
+import logoImg from '../../assets/images/logo.svg';
+import { Button } from '../../components/Button/index';
+import { Question } from '../../components/Question/index';
+import { RoomCode } from '../../components/RoomCode/index';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
+import '../../styles/room.scss';
+import '../../components/Question/style.scss';
+import { useRoom } from '../../hooks/useRoom';
 import { useHistory } from 'react-router';
-import { Toggle } from '../components/Toggle/index';
-import { useTheme } from '../hooks/useTheme';
-import logoDarkImg from '../assets/images/logo-dark.svg';
+import { Toggle } from '../../components/Toggle/index';
+import { useTheme } from '../../hooks/useTheme';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
 
 type RoomParams = {
   id: string;

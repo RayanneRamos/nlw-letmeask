@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Home } from './pages/Home'; 
-import { NewRoom } from './pages/NewRoom';
+import { Home } from './pages/Home/index'; 
+import { NewRoom } from './pages/NewRoom/index';
 import { AuthContextProvider } from './contexts/AuthContext';
-import { Room } from './pages/Room';
+import { Room } from './pages/Room/index';
 import { AdminRoom } from './pages/AdminRoom/index';
-import { RoomList } from './pages/RoomList';
+import { RoomList } from './pages/RoomList/index';
 
 function App() {
   return (

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import logoImg from '../assets/images/logo.svg';
-import emptyImg from '../assets/images/empty-room.svg';
-import { database } from '../services/firebase';
-import '../styles/room.scss';
-import { useTheme } from '../hooks/useTheme';
-import { Toggle } from '../components/Toggle/index';
-import logoDarkImg from '../assets/images/logo-dark.svg';
+import logoImg from '../../assets/images/logo.svg';
+import emptyImg from '../../assets/images/empty-room.svg';
+import { database } from '../../services/firebase';
+import '../../styles/room.scss';
+import { useTheme } from '../../hooks/useTheme';
+import { Toggle } from '../../components/Toggle/index';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
 
 type RoomType = {
   roomId: string,
