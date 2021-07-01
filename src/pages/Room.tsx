@@ -10,6 +10,9 @@ import '../styles/room.scss';
 import '../components/Question/style.scss';
 import { useRoom } from '../hooks/useRoom';
 import { useHistory } from 'react-router';
+import { Toggle } from '../components/Toggle/index';
+import { useTheme } from '../hooks/useTheme';
+import logoDarkImg from '../assets/images/logo-dark.svg';
 
 type RoomParams = {
   id: string;
@@ -22,6 +25,7 @@ export function Room () {
   const { user, signInWithGoogle } = useAuth();
   const { title, questions } = useRoom(roomId);
   const history = useHistory();
+  const { theme } = useTheme();
   
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -64,11 +68,15 @@ export function Room () {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" onClick={handleGoToHomePage} />
-          <RoomCode code={roomId} />
+          <img src={theme === 'light' ? logoImg : logoDarkImg} alt="Letmeask" onClick={handleGoToHomePage} />
+          <div>
+            <RoomCode code={roomId} />
+            <Toggle />
+          </div>
+         
         </div>
       </header>
       <main>

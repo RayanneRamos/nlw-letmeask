@@ -4,6 +4,9 @@ import logoImg from '../assets/images/logo.svg';
 import emptyImg from '../assets/images/empty-room.svg';
 import { database } from '../services/firebase';
 import '../styles/room.scss';
+import { useTheme } from '../hooks/useTheme';
+import { Toggle } from '../components/Toggle/index';
+import logoDarkImg from '../assets/images/logo-dark.svg';
 
 type RoomType = {
   roomId: string,
@@ -15,6 +18,7 @@ export function RoomList() {
   const history = useHistory();
   const [ rooms, setRooms ] = useState<RoomType>([]);
   const [ isLoading, setIsLoading ] = useState<boolean>(true);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const dbRef = database.ref(`rooms`);
@@ -46,10 +50,13 @@ export function RoomList() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" onClick={handleGoHomePage} />
+          <img src={theme === 'light' ? logoImg : logoDarkImg} alt="Letmeask" onClick={handleGoHomePage} />
+          <div>
+            <Toggle />
+          </div>
         </div>
       </header>
       <main className="content">
