@@ -1,5 +1,6 @@
 import Switch from "react-switch";
 import { useTheme } from "../../hooks/useTheme";
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 export function Toggle() {
   const { theme, toggleTheme } = useTheme();
@@ -23,7 +24,7 @@ export function Toggle() {
             fontSize: 12
           }}
         >
-          🌞
+          <FaSun />
         </div>}
         uncheckedHandleIcon={<div
           style={{
@@ -34,7 +35,7 @@ export function Toggle() {
             fontSize: 12
           }}
         >
-          🌙
+          <FaMoon />
         </div>}
       />
     </div>

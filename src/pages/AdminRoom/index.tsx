@@ -1,16 +1,19 @@
 import { useHistory, useParams } from 'react-router-dom';
-import logoImg from '../assets/images/logo.svg';
-import { Button } from '../components/Button/index';
-import { Question } from '../components/Question/index';
-import { RoomCode } from '../components/RoomCode/index';
-import '../styles/room.scss';
-import '../components/Question/style.scss';
-import { useRoom } from '../hooks/useRoom';
-import deleteImg from '../assets/images/delete.svg';
-import { database } from '../services/firebase';
-import checkImg from '../assets/images/check.svg';
-import answerImg from '../assets/images/answer.svg';
+import logoImg from '../../assets/images/logo.svg';
+import { Button } from '../../components/Button/index';
+import { Question } from '../../components/Question/index';
+import { RoomCode } from '../../components/RoomCode/index';
+import '../AdminRoom/style.scss';
+import '../../components/Question/style.scss';
+import { useRoom } from '../../hooks/useRoom';
+import deleteImg from '../../assets/images/delete.svg';
+import { database } from '../../services/firebase';
+import checkImg from '../../assets/images/check.svg';
+import answerImg from '../../assets/images/answer.svg';
 //import { useAuth } from '../hooks/useAuth';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
+import { useTheme } from '../../hooks/useTheme';
+import { Toggle } from '../../components/Toggle/index';
 
 type RoomParams = {
   id: string;
@@ -22,6 +25,7 @@ export function AdminRoom () {
   const roomId = params.id;
   //const { user } = useAuth();
   const { title, questions } = useRoom(roomId);
+  const { theme } = useTheme();
 
   async function handleDeleteQuestion(questionId: string) {
     if(window.confirm('Tem certeza que você deseja excluir esta pergunta?')) {
@@ -55,18 +59,19 @@ export function AdminRoom () {
   }
 
   return (
-    <div id="page-room">
-      <header>
+    <div id="page-admin" className={theme}>
+      <header className={theme}>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" onClick={handleGoHomePage} />
+          <img src={theme === 'light' ? logoImg : logoDarkImg} alt="Letmeask" onClick={handleGoHomePage} />
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
+            <Toggle />
           </div>
         </div>
       </header>
       <main>
-        <div className="room-title">
+        <div className={`room-title ${theme}`}>
           <h1>Sala {title}</h1>
           { questions.length > 0 && <span>{questions.length} pergunta(s)</span> }
         </div>
