@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
@@ -25,6 +26,12 @@ export function NewRoom() {
     event.preventDefault();
     
     if(newRoom.trim() === '') {
+      toast.error("Nome da sala está vazio!");
+      return;
+    }
+
+    if(!user) {
+      toast.error("Você precisa estar logado para criar uma sala!");
       return;
     }
     
@@ -47,11 +54,17 @@ export function NewRoom() {
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
       <main>
+        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         <div className="main-content">
           <div className="toggle">
             <Toggle />
           </div>
           <img src={theme === 'light' ? logoImg : logoDarkImg} alt="Letmeask" />
+          {user && (
+            <div className="info-user">
+              <img src={user?.avatar} alt={user?.name} />
+            </div>
+          )}
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input 
