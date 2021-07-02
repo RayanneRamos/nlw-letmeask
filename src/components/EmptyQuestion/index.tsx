@@ -1,4 +1,4 @@
-import emptyImg from '../../assets/images/empty-question.svg';
+import emptyImg from '../../assets/images/empty-questions.svg';
 import { useTheme } from '../../hooks/useTheme';
 import { Loading } from '../Loading/index';
 import '../EmptyQuestion/style.scss';
