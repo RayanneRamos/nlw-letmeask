@@ -21,7 +21,6 @@ import { useAuth } from '../../hooks/useAuth';
 
 import { database } from '../../services/firebase';
 
-import '../../components/Question/style.scss';
 import '../AdminRoom/style.scss';
 
 type RoomParams = {
