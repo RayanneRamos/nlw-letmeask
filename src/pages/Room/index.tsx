@@ -9,6 +9,7 @@ import { Button } from '../../components/Button/index';
 import { Question } from '../../components/Question/index';
 import { RoomCode } from '../../components/RoomCode/index';
 import { Toggle } from '../../components/Toggle/index';
+import { Loading } from '../../components/Loading/index';
 
 import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
