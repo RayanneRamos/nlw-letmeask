@@ -14,7 +14,7 @@
 
 <br>
 
-## 💻 pROJETO
+## 💻 Projeto
 
 [Let Me Ask](https://letmeask-a22a1.web.app/) é um projeto desenvolvido durante a [Next Level Week #06](https://nextlevelweek.com/),
 apresentado pela [Rocketseat](https://rocketseat.com.br) entre 20 a 27 de Junho de 2021.
