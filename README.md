@@ -60,10 +60,10 @@ Você pode visualizar o layout do projeto através:
  - [Layout Web](https://www.figma.com/file/Uf2FtAixC7CNH2stDTTy0c/Letmeask-(Copy)?node-id=0%3A1) 
 
 ## 🔥 Desafios
- - [] PWA
+ - [ ] PWA
  - [x] Responsividade
  - [x] Dark Theme
- - [] Login Github
+ - [ ] Login Github
 
 ## 📝 License
 
